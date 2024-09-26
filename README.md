@@ -35,3 +35,23 @@ Welcome to the detection model repository
    just contact me for any doubt
 
 All the best...:)
+
+
+
+## **For API endpoints:** 
+
+1. create virtual environment
+
+   python -m venv myenv
+
+2. activate virtual environment
+
+   source myenv/bin/activate
+
+3. install requirements 
+
+   pip install -r requirements.txt
+
+4. start server
+
+   python app.py
