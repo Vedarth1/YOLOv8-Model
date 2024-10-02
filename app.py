@@ -35,7 +35,7 @@ def predict_image():
 
         print("File received!!! \n Model is working on image!")
 
-        command = f"python ultralytics/yolo/v8/detect/predict.py model='newpts.pt' source=\"{temp_file_path}\""
+        command = f"python3 ultralytics/yolo/v8/detect/predict.py model='newpts.pt' source=\"{temp_file_path}\""
 
         try:
             output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
