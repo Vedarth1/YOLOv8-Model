@@ -1,26 +1,60 @@
-# Licence-Plate-Detection-using-YOLO-V8
+# **Licence-Plate-Detection-using-YOLO-V8**
 
 Welcome to the detection model repository
 
 **Few things to note**
 
-1. The images used as well as detected images in ``results`` directory are only for demo purpose here, new images should be used for detection purpose.
+1.   The images used as well as detected images in ``results`` directory are only for demo purpose here, new images should be used for detection purpose.
 
 2. ``newpts.pt`` is an entire trained model for this project and should not be changed or removed anyhow...
 
 3. This model is not yet integrated and hence you can use it saperately
 
 
+## Run Locally
 
-## **Steps to run the model:** 
+Clone the project
 
-1. Clone the repo into local system: ``git clone https://github.com/Vedarth1/YOLOv8-Model``
+```bash
+  git clone https://github.com/Vedarth1/YOLOv8-Model
+```
 
-2. install requirements: (use any IDE like pycharm or jupyter notebook and ensure your interpreter is properly configured for python 3, else download python3 and set its environment variable globally.. also if need, update pip command)
+Go to the project directory
 
-   ``pip install -r requirements.txt``
+```bash
+  cd YOLOv8-Model
+```
 
-3. open python console or powershell in same IDE:
+Create virtual environment
+
+```bash
+  python -m venv myenv
+```
+
+Activate virtual environment
+
+```bash
+  source myenv/bin/activate #for mac
+```
+
+Install Dependencies: 
+
+(use any IDE like pycharm or jupyter notebook and ensure your interpreter is properly configured for python 3, else download python3 and set its environment variable globally.. also if need, update pip command)
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  python app.py
+```
+
+
+## Run by using Console
+
+1. open python console or powershell in same IDE:
 
    For python console:
 
@@ -30,28 +64,36 @@ Welcome to the detection model repository
 
    ``python ultralytics/yolo/v8/detect/predict.py model='newpts.pt' source='/image path'``
 
-4. If cuda and pytorch is properly configured in your model then you will be able to see detected image in ``results`` directory..
+2. If cuda and pytorch is properly configured in your model then you will be able to see detected image in ``results`` directory..
+## API Reference
 
-   just contact me for any doubt
+### Test API
 
-All the best...:)
+```http
+  GET /
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `None` | `None` | Returns hello! |
+
+### Get item
+
+```http
+  POST /predict
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `file`      | `file` | **Required**. image |
+
+##### Returns zip file of Detected number plates of vehicles
 
 
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/reference-project
+)](https://github.com/Vedarth1/ECOWATCH) Reference project!
 
-## **For API endpoints:** 
+A pollution monitoring and PUC validation System
 
-1. create virtual environment
 
-   python -m venv myenv
-
-2. activate virtual environment
-
-   source myenv/bin/activate
-
-3. install requirements 
-
-   pip install -r requirements.txt
-
-4. start server
-
-   python app.py
